@@ -28,7 +28,7 @@ luac.out
 # Shared objects (inc. Windows DLLs)
 *.dll
 *.so
-*.so.*
+*.so*
 *.dylib
 
 # Executables
@@ -39,3 +39,11 @@ luac.out
 *.x86_64
 *.hex
 
+# SSH keys
+ssh
+
+# git include
+./include/git2.h
+./include/git2/**
+
+./tmp

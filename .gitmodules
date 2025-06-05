@@ -1,0 +1,6 @@
+[submodule "libs/argparse"]
+	path = libs/argparse
+	url = git@github.com:Neh3maH/lua-argparse.git
+[submodule "libs/utils"]
+	path = libs/utils
+	url = git@github.com:Neh3maH/lua_utils.git
