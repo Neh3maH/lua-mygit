@@ -1,10 +1,16 @@
 assert(package.loadlib('./libs/libgit2.so.1.9', '*'))
+deps = require 'deps'
+for k, v in pairs(deps.deps) do
+	print(k, v)
+end
+
+deps:ld('.')
 require 'toast'
 local helpers = require 'lua.helpers'
-local types = require 'lua.utils.types'
-local utils = require 'lua.utils.misc'
-local collections = require 'lua.utils.collections'
-local argparse = require 'lua.argparse'
+local types = require 'utils/types'
+local utils = require 'utils/misc'
+local collections = require 'utils/collections'
+local argparse = require 'argparse'
 
 print("==== ARGS ====")
 --if nil == res then
@@ -122,9 +128,9 @@ toastlib.init()
 --os.execute("echo edited > ./tmp/toast")
 --steps.index.add_all(_path)
 --steps.commit.create("new commit", _path)
-os.execute("echo vermicelle1 > ./tmp/newfile1")
-os.execute("echo edited > ./tmp/newfile")
-os.execute("rm -rf ./tmp/toast")
-err = toastlib.reset_hard("main", _path)
-print("err = ", err)
+--os.execute("echo vermicelle1 > ./tmp/newfile1")
+--os.execute("echo edited > ./tmp/newfile")
+--os.execute("rm -rf ./tmp/toast")
+--err = toastlib.reset_hard("main", _path)
+--print("err = ", err)
 toastlib.shutdown()
